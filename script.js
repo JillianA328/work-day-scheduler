@@ -18,21 +18,20 @@ function trackHours() {
   var currentTime = moment().hour();
 
   $(".time-block").each(function () {
-    var hourBlock = parseInt($(this).attr("id").split("hour")[1]);
+    var hourBlock = parseInt($(this).attr("id").split("hr")[1]);
+
+    $(this).removeClass("present");
+    $(this).removeClass("future");
+    $(this).removeClass("past");
+    
 
     if (hourBlock < currentTime) {
       $(this).addClass("past");
-      $(this).removeClass("future");
-      $(this).removeClass("present");
-
+   
     } else if (hourBlock === currentTime) {
-      $(this).removeClass("past");
       $(this).addClass("present");
-      $(this).removeClass("future");
 
-    } else {  
-      $(this).removeClass("present");
-      $(this).removeClass("past");
+} else {  
       $(this).addClass("future");
     }
 
@@ -40,7 +39,7 @@ function trackHours() {
 
 }
 
-trackHours();
+
 
 
 $("#hr9 .description").val(localStorage.getItem("hr9"));
@@ -53,5 +52,4 @@ $("#hr15 .description").val(localStorage.getItem("hr15"));
 $("#hr16 .description").val(localStorage.getItem("hr16"));
 $("#hr17 .description").val(localStorage.getItem("hr17"));
 
-
-
+trackHours();
