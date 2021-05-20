@@ -4,4 +4,4 @@ This website, called "Work Day Scheduler" is a simple website that allows you to
 ![workday2](https://user-images.githubusercontent.com/81400805/119017274-d7037f00-b968-11eb-9057-1ab17498d40c.PNG)
 
 
-https://jilliana328.github.io/workday/
+https://jilliana328.github.io/buttervice/
